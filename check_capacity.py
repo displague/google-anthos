@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import subprocess
 import requests
 import json
@@ -49,8 +50,8 @@ def main():
   else:
     same_size = False
     servers=[(facility, router_size, router_host_count), (facility, esxi_size, esxi_host_count)]
-  servers_json = {"servers":[]} 
-  for server in servers: 
+  servers_json = {"servers":[]}
+  for server in servers:
     servers_json["servers"].append( {"facility": server[0], "plan": server[1], "quantity": server[2]} )
 
 ## Using requests to validate capacity
